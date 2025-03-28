@@ -133,7 +133,7 @@
       <form id='quizForm' method='post'>
         <div id='quiz-container'>
           {% for i in questions|dictsort %}
-  {% set question = i[1] %}
+          {% set question = i[1] %}
 
           <div class='question' data-question-id='{{ i }}'>
             <h2>{{ question['text'] }}</h2>
