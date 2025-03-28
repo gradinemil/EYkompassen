@@ -132,7 +132,9 @@
       <div id='progressBar'><div id='progressBarFill'></div></div>
       <form id='quizForm' method='post'>
         <div id='quiz-container'>
-          {% for i, question in questions.items() %}
+          {% for i in questions|dictsort %}
+  {% set question = i[1] %}
+
           <div class='question' data-question-id='{{ i }}'>
             <h2>{{ question['text'] }}</h2>
             <select name='q{{ i }}'>
