@@ -64,7 +64,7 @@ html_template = """
       margin: 20px 10px 0 10px;
     }
     button:hover {
-      background-color: #004d40;
+      background-color: #797991;
     }
     .result {
       margin-top: 40px;
@@ -80,9 +80,9 @@ html_template = """
     #progressBarFill {
       height: 100%;
       width: 0;
-      background-color: #00796b;
+      background-color: #FFE600;
       transition: width 0.3s ease;
-      color: white;
+      color: black;
       font-weight: bold;
       display: flex;
       align-items: center;
@@ -130,7 +130,7 @@ html_template = """
   <div class='container'>
     {% if not result %}
     <div id='intro'>
-  <span style='font-size: 4rem; color: black;'>🧭</span>
+  <span style='font-size: 4rem; color: white;'>🧭</span>
   <h1>EY Kompassen</h1>
   <p>Ta reda på var du passar bäst in hos oss!</p>
   <p style='font-size: 1.1em; margin-bottom: 10px;'>EY (Ernst & Young) är ett av världens största revisions- och rådgivningsföretag med verksamhet i över 150 länder. Vi hjälper företag, organisationer och offentlig sektor att växa, effektivisera och hantera förändringar på ett hållbart och ansvarsfullt sätt. EY:s syfte är att "bygga en bättre arbetsvärld" genom att skapa långsiktigt värde för kunder, medarbetare och samhället.</p>
@@ -150,7 +150,7 @@ html_template = """
     {% endif %}
 
     <div id='quizSection' style='display:none;'>
-      <span style='font-size: 4rem; color: black;'>🧭</span>
+      <span style='font-size: 4rem; color: white;'>🧭</span>
       <h1>EY Kompassen</h1>
       <p>En fråga i taget – svara så noggrant du kan!</p>
       <div style='text-align:left;margin-bottom:5px;font-weight:bold;' id='questionCounter'></div>
