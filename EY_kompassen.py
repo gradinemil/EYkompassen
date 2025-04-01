@@ -19,6 +19,7 @@ html_template = """
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #2E2E38;
+      color: white
       margin: 0;
       padding: 0;
     }
@@ -26,6 +27,7 @@ html_template = """
       max-width: 800px;
       margin: 20px auto;
       background: black;
+      color: white
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -52,8 +54,8 @@ html_template = """
       font-size: 1em;
     }
     button {
-      background-color: #2E2E38;
-      color: black;
+      background-color: #797991;
+      color: white;
       padding: 12px 20px;
       font-size: 1em;
       border: none;
