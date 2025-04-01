@@ -19,15 +19,13 @@ html_template = """
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #2E2E38;
-      color: white
       margin: 0;
       padding: 0;
     }
     .container {
       max-width: 800px;
       margin: 20px auto;
-      background: black;
-      color: white
+      background: white;
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -54,7 +52,7 @@ html_template = """
       font-size: 1em;
     }
     button {
-      background-color: #797991;
+      background-color: #00796b;
       color: white;
       padding: 12px 20px;
       font-size: 1em;
@@ -64,7 +62,7 @@ html_template = """
       margin: 20px 10px 0 10px;
     }
     button:hover {
-      background-color: #797991;
+      background-color: #004d40;
     }
     .result {
       margin-top: 40px;
@@ -80,9 +78,9 @@ html_template = """
     #progressBarFill {
       height: 100%;
       width: 0;
-      background-color: #FFE600;
+      background-color: #00796b;
       transition: width 0.3s ease;
-      color: black;
+      color: white;
       font-weight: bold;
       display: flex;
       align-items: center;
@@ -130,7 +128,7 @@ html_template = """
   <div class='container'>
     {% if not result %}
     <div id='intro'>
-  <span style='font-size: 4rem; color: white;'>🧭</span>
+  <span style='font-size: 4rem; color: black;'>🧭</span>
   <h1>EY Kompassen</h1>
   <p>Ta reda på var du passar bäst in hos oss!</p>
   <p style='font-size: 1.1em; margin-bottom: 10px;'>EY (Ernst & Young) är ett av världens största revisions- och rådgivningsföretag med verksamhet i över 150 länder. Vi hjälper företag, organisationer och offentlig sektor att växa, effektivisera och hantera förändringar på ett hållbart och ansvarsfullt sätt. EY:s syfte är att "bygga en bättre arbetsvärld" genom att skapa långsiktigt värde för kunder, medarbetare och samhället.</p>
@@ -150,7 +148,7 @@ html_template = """
     {% endif %}
 
     <div id='quizSection' style='display:none;'>
-      <span style='font-size: 4rem; color: white;'>🧭</span>
+      <span style='font-size: 4rem; color: black;'>🧭</span>
       <h1>EY Kompassen</h1>
       <p>En fråga i taget – svara så noggrant du kan!</p>
       <div style='text-align:left;margin-bottom:5px;font-weight:bold;' id='questionCounter'></div>
@@ -431,6 +429,7 @@ if __name__ == "__main__":
 
     threading.Thread(target=open_browser).start()
     app.run(debug=False, port=port)
+
 
 
 
