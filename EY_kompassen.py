@@ -18,7 +18,7 @@ html_template = """
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #fff);
+      background-color: #2E2E38;
       margin: 0;
       padding: 0;
     }
