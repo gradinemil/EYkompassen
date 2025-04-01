@@ -25,7 +25,7 @@ html_template = """
     .container {
       max-width: 800px;
       margin: 20px auto;
-      background: white;
+      background-color: #2E2E38;
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
