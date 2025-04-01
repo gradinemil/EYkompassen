@@ -25,7 +25,7 @@ html_template = """
     .container {
       max-width: 800px;
       margin: 20px auto;
-      background: white;
+      background: black;
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -52,8 +52,8 @@ html_template = """
       font-size: 1em;
     }
     button {
-      background-color: #00796b;
-      color: white;
+      background-color: #2E2E38;
+      color: black;
       padding: 12px 20px;
       font-size: 1em;
       border: none;
