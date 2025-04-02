@@ -40,7 +40,10 @@ html_template = """
       color: white;
       margin-bottom: 6px;
     }
-    h3, p, li, label, select, option, span {
+    p {
+      color: #FFE600;
+    }
+    h3, li, label, select, option, span {
       color: white;
     }
     .question {
