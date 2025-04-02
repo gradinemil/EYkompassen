@@ -43,7 +43,7 @@ html_template = """
     p {
       color: #FFE600;
     }
-    h3, li, label, select, option, span {
+    h3, h4, li, label, select, option, span {
       color: white;
     }
     .question {
@@ -149,8 +149,8 @@ html_template = """
   <span style='font-size: 4rem; color: black;'>🧭</span>
   <h1>EY Kompassen</h1>
   <p>Shape your future with confidence!</p>
-  <p style='font-size: 1.1em; margin-bottom: 10px;'>EY (Ernst & Young) är ett av världens största revisions- och rådgivningsföretag med verksamhet i över 150 länder. Vi hjälper företag, organisationer och offentlig sektor att växa, effektivisera och hantera förändringar på ett hållbart och ansvarsfullt sätt. EY:s syfte är att "bygga en bättre arbetsvärld" genom att skapa långsiktigt värde för kunder, medarbetare och samhället.</p>
-      <p style='font-size: 1.1em; margin-bottom: 10px;'>Hos oss kan du jobba i någon av dessa affärsområden:</p>
+  <h4 style='font-size: 1.1em; margin-bottom: 10px;'>EY (Ernst & Young) är ett av världens största revisions- och rådgivningsföretag med verksamhet i över 150 länder. Vi hjälper företag, organisationer och offentlig sektor att växa, effektivisera och hantera förändringar på ett hållbart och ansvarsfullt sätt. EY:s syfte är att "bygga en bättre arbetsvärld" genom att skapa långsiktigt värde för kunder, medarbetare och samhället.</p>
+      <h4 style='font-size: 1.1em; margin-bottom: 10px;'>Hos oss kan du jobba i någon av dessa affärsområden:</p>
       <br>
        <ul style='list-style: none; padding: 0; font-size: 1em; text-align: left; max-width: 600px; margin: 0 auto;'>
         <br><li><strong>Assurance:</strong> Säkerställer att företag rapporterar rättvisande och transparent information till omvärlden. Det handlar om revision, hållbarhetsgranskning och rådgivning som skapar förtroende på marknaden. Här kan man jobba med redovisning, revision eller som lönekonsult.</li><br>
@@ -159,9 +159,9 @@ html_template = """
         <br><li><strong>Tax & Law:</strong> Ger företag kvalificerad rådgivning inom skatt, moms, juridik och regelefterlevnad. Du hjälper klienter att förstå och hantera komplexa regelverk globalt och strategiskt. Här kan man jobba som skattekonsult eller affärsjurist.</li>
       </ul>
       <br>
-  <p style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
+  <h4 style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
       <br>
-  <p style='font-size: 0.85em; margin-bottom: 10px;'>EY kompassen är ett verktyg för att du ska få en inblick i vad vi arbetar med samt för ta reda på egenskaper du besitter som passar in i våra affärsområden. Ditt resultat ska endast ses som en indikation på vart du möjligen hade passat in hos oss.</p>
+  <h4 style='font-size: 0.85em; margin-bottom: 10px;'>EY kompassen är ett verktyg för att du ska få en inblick i vad vi arbetar med samt för ta reda på egenskaper du besitter som passar in i våra affärsområden. Ditt resultat ska endast ses som en indikation på vart du möjligen hade passat in hos oss.</p>
       <br>
       <button onclick='startQuiz()'>Starta testet</button>
     </div>
@@ -237,7 +237,7 @@ html_template = """
         {% elif label == 'tax' %}rgb(114, 75, 195)
         {% else %}gray{% endif %};">
   {{ descriptions[label]|safe }}
-  <p style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
+  <h4 style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
 </div>
     {% endif %}
   {% endfor %}
