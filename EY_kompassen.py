@@ -218,7 +218,7 @@ html_template = """
     {% set label = item.split(':')[0].lower() %}
     {% if label in descriptions %}
       <div style="padding: 12px; margin-bottom: 12px; border-radius: 8px; color: white; background-color:
-        {% if label == 'strategy' %}rgba(255, 99, 132, 0.9)
+        {% if label == 'strategy' %}rgb(45, 183, 87)
         {% elif label == 'consulting' %}rgba(54, 162, 235, 0.9)
         {% elif label == 'assurance' %}rgba(255, 206, 86, 0.9)
         {% elif label == 'tax' %}rgba(75, 192, 192, 0.9)
