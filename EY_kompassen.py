@@ -36,6 +36,9 @@ html_template = """
     h1 {
       color: #FFE600;
     }
+    p {
+      color: #FFE600;
+    }
     h2, h3, p, li, label, select, option, span {
       color: white;
     }
