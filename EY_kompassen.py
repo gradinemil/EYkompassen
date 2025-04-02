@@ -140,7 +140,7 @@ html_template = """
     <div id='intro'>
   <span style='font-size: 4rem; color: black;'>🧭</span>
   <h1>EY Kompassen</h1>
-  <p>Ta reda på var du passar bäst in hos oss!</p>
+  <p>Shape your future with confidence!</p>
   <p style='font-size: 1.1em; margin-bottom: 10px;'>EY (Ernst & Young) är ett av världens största revisions- och rådgivningsföretag med verksamhet i över 150 länder. Vi hjälper företag, organisationer och offentlig sektor att växa, effektivisera och hantera förändringar på ett hållbart och ansvarsfullt sätt. EY:s syfte är att "bygga en bättre arbetsvärld" genom att skapa långsiktigt värde för kunder, medarbetare och samhället.</p>
       <p style='font-size: 1.1em; margin-bottom: 10px;'>Hos oss kan du jobba i någon av dessa affärsområden:</p>
       <br>
@@ -160,7 +160,7 @@ html_template = """
     <div id='quizSection' style='display:none;'>
       <span style='font-size: 4rem; color: black;'>🧭</span>
       <h1>EY Kompassen</h1>
-      <p>En fråga i taget – svara så noggrant du kan!</p>
+      <p>Shape your future with confidence!</p>
       <div style='text-align:left;margin-bottom:5px;font-weight:bold;' id='questionCounter'></div>
       <div id='progressBar'><div id='progressBarFill'></div></div>
       <form id='quizForm' method='post'>
@@ -190,6 +190,8 @@ html_template = """
     </div>
     {% if result %}
     <div class='result'>
+      <h1>EY Kompassen</h1>
+      <p>Shape your future with confidence!</p>
       <h2>Du matchar mest med: {{ top_match }}</h2>
       <div style='display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;'>
         {% for item in result.split() %}
