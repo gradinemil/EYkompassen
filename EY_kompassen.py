@@ -219,9 +219,9 @@ html_template = """
     {% if label in descriptions %}
       <div style="padding: 12px; margin-bottom: 12px; border-radius: 8px; color: white; background-color:
         {% if label == 'strategy' %}rgb(45, 183, 87)
-        {% elif label == 'consulting' %}rgba(54, 162, 235, 0.9)
-        {% elif label == 'assurance' %}rgba(255, 206, 86, 0.9)
-        {% elif label == 'tax' %}rgba(75, 192, 192, 0.9)
+        {% elif label == 'consulting' %}rgb(24, 140, 229)
+        {% elif label == 'assurance' %}rgb(117, 14, 92)
+        {% elif label == 'tax' %}rgb(114, 75, 195)
         {% else %}gray{% endif %};">
   {{ descriptions[label]|safe }}
 </div>
@@ -241,16 +241,16 @@ html_template = """
           datasets: [{
             data: Object.values(data),
             backgroundColor: [
-              'rgba(255, 99, 132, 0.9)',
-              'rgba(54, 162, 235, 0.9)',
-              'rgba(255, 206, 86, 0.9)',
-              'rgba(75, 192, 192, 0.9)'
+              'rgb(45, 183, 87)',
+              'rgb(24, 140, 229)',
+              'rgb(117, 14, 92)',
+              'rgb(114, 75, 195)'
             ],
             borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)'
+              'rgb(45, 183, 87)',
+              'rgb(24, 140, 229)',
+              'rgb(117, 14, 92)',
+              'rgb(114, 75, 195)'
             ],
             borderWidth: 1
           }]
