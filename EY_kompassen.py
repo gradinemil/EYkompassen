@@ -196,10 +196,10 @@ html_template = """
           {% if ':' in item %}
             {% set label, value = item.split(':') %}
             <span style="padding: 6px 10px; border-radius: 8px; color: white; background-color:
-              {% if label.lower() == 'strategy' %}rgba(255, 99, 132, 0.9)
-              {% elif label.lower() == 'consulting' %}rgba(54, 162, 235, 0.9)
-              {% elif label.lower() == 'assurance' %}rgba(255, 206, 86, 0.9)
-              {% elif label.lower() == 'tax' %}rgba(75, 192, 192, 0.9)
+              {% if label.lower() == 'strategy' %}rgb(45, 183, 87)
+              {% elif label.lower() == 'Consulting' %}rgb(24, 140, 229)
+              {% elif label.lower() == 'Assurance' %}rgb(117, 14, 92)
+              {% elif label.lower() == 'tax' %}rgb(114, 75, 195)
               {% else %}gray{% endif %};">
               {% if label == 'strategy' %}Strategy & Transactions{% elif label == 'tax' %}Tax & Law{% else %}{{ label }}{% endif %}: {{ value }}%
             </span>
