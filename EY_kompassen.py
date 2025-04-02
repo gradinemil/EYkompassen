@@ -423,8 +423,15 @@ def index():
         if total > 0:
             percentages = {k: round(v / total * 100) for k, v in scores.items()}
             sorted_matches = sorted(percentages.items(), key=lambda x: x[1], reverse=True)
+           
+            full_names = {
+                "strategy": "Strategy & Transactions",
+                "consulting": "Consulting",
+                "assurance": "Assurance",
+                "tax": "Tax & Law"
+            }
             result = " ".join([f"{k}:{v}" for k, v in sorted_matches])
-            chart_data = json.dumps({k.capitalize(): v for k, v in percentages.items()})
+            chart_data = json.dumps({full_names[k]: v for k, v in percentages.items()})
             top_match = (
         'Strategy & Transactions' if sorted_matches[0][0] == 'strategy' else
         'Tax & Law' if sorted_matches[0][0] == 'tax' else
