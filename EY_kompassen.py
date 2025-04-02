@@ -60,7 +60,7 @@ html_template = """
     }
     button {
       background-color: #FFE600;
-      color: white;
+      color: black;
       padding: 12px 20px;
       font-size: 1em;
       border: none;
