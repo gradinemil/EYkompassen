@@ -72,7 +72,7 @@ html_template = """
       margin: 20px 10px 0 10px;
     }
     button:hover {
-      background-color: #FFE600;
+      background-color: #FFF2AF;
     }
     .result {
       margin-top: 40px;
