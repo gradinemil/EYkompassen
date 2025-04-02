@@ -41,6 +41,9 @@ html_template = """
     }
     .question {
       margin-bottom: 30px;
+      background-color: #2E2E38;
+      padding: 20px;
+      border-radius: 12px;
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.5s ease;
