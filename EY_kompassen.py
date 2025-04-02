@@ -198,7 +198,7 @@ html_template = """
             <span style="padding: 6px 10px; border-radius: 8px; color: white; background-color:
               {% if label.lower() == 'strategy' %}rgb(45, 183, 87)
               {% elif label.lower() == 'consulting' %}rgb(24, 140, 229)
-              {% elif label.lower() == 'Assurance' %}rgb(117, 14, 92)
+              {% elif label.lower() == 'assurance' %}rgb(117, 14, 92)
               {% elif label.lower() == 'tax' %}rgb(114, 75, 195)
               {% else %}gray{% endif %};">
               {% if label == 'strategy' %}Strategy & Transactions{% elif label == 'tax' %}Tax & Law{% else %}{{ label }}{% endif %}: {{ value }}%
@@ -211,7 +211,7 @@ html_template = """
   {% set descriptions = {
     'strategy': "<strong>Strategy & Transactions:</strong> Du är analytisk, målinriktad och gillar att tänka långsiktigt. Strategy inom EY fokuserar på att hjälpa företag fatta viktiga affärsbeslut och utforma framtidsstrategier. Du kan komma att arbeta med företagsförvärv, affärsmodeller, marknadsanalyser eller transformationsprojekt på hög nivå.",
     'consulting': "<strong>Consulting:</strong> Du är kommunikativ, kreativ och gillar variation. Consulting innebär att hjälpa organisationer förbättra sin verksamhet, ofta genom digitalisering, förändringsledning eller processoptimering. Du samarbetar nära kunder och driver förändring inom områden som teknik, HR, ekonomi eller hållbarhet.",
-    'Assurance': "<strong>Assurance:</strong> Du är noggrann, strukturerad och gillar att saker blir rätt. Inom Assurance arbetar du ofta med revision och kvalitetssäkring av finansiell information. Du hjälper företag skapa förtroende genom att granska årsredovisningar, interna kontroller och säkerställa att allt följer lagar och regler.",
+    'assurance': "<strong>Assurance:</strong> Du är noggrann, strukturerad och gillar att saker blir rätt. Inom Assurance arbetar du ofta med revision och kvalitetssäkring av finansiell information. Du hjälper företag skapa förtroende genom att granska årsredovisningar, interna kontroller och säkerställa att allt följer lagar och regler.",
     'tax': "<strong>Tax & Law:</strong> Du är detaljfokuserad, systematisk och gillar att förstå regler och lagar. Tax innebär att hjälpa företag och privatpersoner navigera i skattesystemet. Du kan arbeta med nationell och internationell beskattning, moms, transaktioner eller hållbar skattekonsultation i en ständigt föränderlig omvärld."
   } %}
   {% for item in result.split() %}
@@ -220,7 +220,7 @@ html_template = """
       <div style="padding: 12px; margin-bottom: 12px; border-radius: 8px; color: white; background-color:
         {% if label == 'strategy' %}rgb(45, 183, 87)
         {% elif label == 'consulting' %}rgb(24, 140, 229)
-        {% elif label == 'Assurance' %}rgb(117, 14, 92)
+        {% elif label == 'assurance' %}rgb(117, 14, 92)
         {% elif label == 'tax' %}rgb(114, 75, 195)
         {% else %}gray{% endif %};">
   {{ descriptions[label]|safe }}
@@ -334,64 +334,64 @@ html_template = """
 
 questions = {
     9: {"text": "I vilken typ av arbetsmiljö trivs du bäst?", "options": [
-        {"label": "Ett ordnat och förutsägbart arbetsklimat", "value": "Assurance:2,tax:2"},
+        {"label": "Ett ordnat och förutsägbart arbetsklimat", "value": "assurance:2,tax:2"},
         {"label": "En fartfylld miljö med nya idéer och variation", "value": "consulting:2,strategy:1"},
         {"label": "En tänkande miljö där långsiktighet och logik är viktigt", "value": "strategy:2,consulting:1"},
-        {"label": "En miljö där det är viktigt att allt blir rätt", "value": "Assurance:3"},
+        {"label": "En miljö där det är viktigt att allt blir rätt", "value": "assurance:3"},
     ]},
     10: {"text": "Vilken typ av samarbete föredrar du?", "options": [
-        {"label": "Jag trivs bäst i små team med tydliga roller", "value": "tax:2,Assurance:1"},
+        {"label": "Jag trivs bäst i små team med tydliga roller", "value": "tax:2,assurance:1"},
         {"label": "Jag gillar att jobba med olika människor och tänka tillsammans", "value": "consulting:2,strategy:1"},
-        {"label": "Jag föredrar att arbeta självständigt och ta ansvar för mina delar", "value": "Assurance:2"},
+        {"label": "Jag föredrar att arbeta självständigt och ta ansvar för mina delar", "value": "assurance:2"},
         {"label": "Jag tycker om att ha inflytande och vara med i beslutsfattning", "value": "strategy:3"},
     ]},
     1: {"text": "Hur hanterar du helst nya situationer?", "options": [
         {"label": "Jag gillar att ta ett steg tillbaka och få överblick först", "value": "strategy:2,consulting:1"},
-        {"label": "Jag tar itu med detaljerna först", "value": "Assurance:2,tax:1"},
+        {"label": "Jag tar itu med detaljerna först", "value": "assurance:2,tax:1"},
         {"label": "Jag brainstormar med andra och söker kreativa lösningar", "value": "consulting:2,strategy:1"},
-        {"label": "Jag gillar när det finns tydliga instruktioner och ramar att följa", "value": "tax:2,Assurance:1"},
+        {"label": "Jag gillar när det finns tydliga instruktioner och ramar att följa", "value": "tax:2,assurance:1"},
     ]},
     2: {"text": "Vilken typ av projekt låter mest intressant?", "options": [
-        {"label": "Förbättra och utveckla befintliga processer och system", "value": "consulting:2,Assurance:1"},
+        {"label": "Förbättra och utveckla befintliga processer och system", "value": "consulting:2,assurance:1"},
         {"label": "Bidra till beslut som formar framtiden", "value": "strategy:3"},
-        {"label": "Projekt där man får tolka information noggrant", "value": "tax:2,Assurance:1"},
-        {"label": "Granska och säkra information", "value": "Assurance:3"},
+        {"label": "Projekt där man får tolka information noggrant", "value": "tax:2,assurance:1"},
+        {"label": "Granska och säkra information", "value": "assurance:3"},
     ]},
     3: {"text": "Vad motiverar dig mest?", "options": [
         {"label": "Att tänka kreativt och hitta nya vägar framåt", "value": "strategy:2,consulting:1"},
-        {"label": "Att ha tydliga riktlinjer och säkra att allt stämmer", "value": "Assurance:2,tax:1"},
+        {"label": "Att ha tydliga riktlinjer och säkra att allt stämmer", "value": "assurance:2,tax:1"},
         {"label": "Att lösa problem i samarbete med andra", "value": "consulting:2,strategy:1"},
         {"label": "Att fördjupa mig i detaljer och påverka med kunskap", "value": "tax:3"},
     ]},
     4: {"text": "Hur beskriver du din arbetsstil bäst?", "options": [
-        {"label": "Logisk, strukturerad och ansvarsfull", "value": "Assurance:2,tax:1"},
+        {"label": "Logisk, strukturerad och ansvarsfull", "value": "assurance:2,tax:1"},
         {"label": "Kreativ, kommunikativ och öppen för förändring", "value": "consulting:2,strategy:1"},
         {"label": "Målinriktad, analytisk och helhetsorienterad", "value": "strategy:2,consulting:1"},
-        {"label": "Noggrann, systematisk och gillar tydliga riktlinjer", "value": "tax:2,Assurance:1"},
+        {"label": "Noggrann, systematisk och gillar tydliga riktlinjer", "value": "tax:2,assurance:1"},
     ]},
     5: {"text": "Vilket påstående stämmer bäst in på dig?", "options": [
         {"label": "Jag gillar att förbättra saker och optimera lösningar", "value": "consulting:2,strategy:1"},
-        {"label": "Jag är nyfiken på samband och vill förstå helheten", "value": "strategy:2,Assurance:1"},
-        {"label": "Jag vill skapa trygghet och se till att allt stämmer", "value": "Assurance:2,tax:1"},
+        {"label": "Jag är nyfiken på samband och vill förstå helheten", "value": "strategy:2,assurance:1"},
+        {"label": "Jag vill skapa trygghet och se till att allt stämmer", "value": "assurance:2,tax:1"},
         {"label": "Jag drivs av att förstå komplexa lagar och regler", "value": "tax:3"},
     ]},
     6: {"text": "Hur hanterar du osäkerhet?", "options": [
-        {"label": "Jag gillar att skapa struktur i komplexa situationer", "value": "Assurance:2,tax:1"},
+        {"label": "Jag gillar att skapa struktur i komplexa situationer", "value": "assurance:2,tax:1"},
         {"label": "Jag tycker om att vara kreativ när läget är otydligt", "value": "strategy:2,consulting:1"},
         {"label": "Jag försöker förstå helheten och planera därefter", "value": "strategy:2"},
-        {"label": "Jag söker gärna stöd hos andra och följer riktlinjer", "value": "tax:2,Assurance:1"},
+        {"label": "Jag söker gärna stöd hos andra och följer riktlinjer", "value": "tax:2,assurance:1"},
     ]},
     7: {"text": "Vad tycker du är roligast att arbeta med?", "options": [
         {"label": "Att analysera och försöka lösa kluriga problem", "value": "strategy:3"},
         {"label": "Att utveckla digitala eller tekniska lösningar", "value": "consulting:2,strategy:1"},
-        {"label": "Att analysera data för att säkerställa korrekthet", "value": "Assurance:3"},
+        {"label": "Att analysera data för att säkerställa korrekthet", "value": "assurance:3"},
         {"label": "Att gå på djupet och förstå viktiga dokument eller avtal", "value": "tax:3"},
     ]},
     8: {"text": "Hur vill du att din roll ska påverka andra?", "options": [
-        {"label": "Skapa tydlighet och pålitlighet i siffror och rapporter", "value": "Assurance:2"},
+        {"label": "Skapa tydlighet och pålitlighet i siffror och rapporter", "value": "assurance:2"},
         {"label": "Göra komplexa beslut lättare att förstå och fatta", "value": "strategy:2,consulting:1"},
         {"label": "Hjälpa organisationer att utvecklas och växa", "value": "consulting:2,strategy:1"},
-        {"label": "Hjälpa till att allt fungerar som det ska i vardagen", "value": "tax:2,Assurance:1"},
+        {"label": "Hjälpa till att allt fungerar som det ska i vardagen", "value": "tax:2,assurance:1"},
     ]},
 }
 
@@ -402,7 +402,7 @@ def index():
     top_match = None
 
     if request.method == "POST":
-        scores = {"strategy": 0, "consulting": 0, "Assurance": 0, "tax": 0}
+        scores = {"strategy": 0, "consulting": 0, "assurance": 0, "tax": 0}
         for i in range(1, 11):
             response = request.form.get(f"q{i}")
             if response:
@@ -439,7 +439,4 @@ if __name__ == "__main__":
 
     threading.Thread(target=open_browser).start()
     app.run(debug=False, port=port)
-
-
-
 
