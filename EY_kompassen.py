@@ -63,7 +63,7 @@ html_template = """
     }
     button {
       background-color: #FFE600;
-      color: black;
+      color: white;
       padding: 12px 20px;
       font-size: 1em;
       border: none;
@@ -72,7 +72,7 @@ html_template = """
       margin: 20px 10px 0 10px;
     }
     button:hover {
-      background-color: #FFE600;
+      background-color: #004d40;
     }
     .result {
       margin-top: 40px;
@@ -95,6 +95,9 @@ html_template = """
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    .assurance-color {
+      background-color: #2DB757 !important;
     }
     #intro {
       display: block;
