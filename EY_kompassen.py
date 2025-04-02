@@ -36,7 +36,11 @@ html_template = """
     h1 {
       color: #FFE600;
     }
-    h2, h3, p, li, label, select, option, span {
+    h2 {
+      color: white;
+      margin-bottom: 6px;
+    }
+    h3, p, li, label, select, option, span {
       color: white;
     }
     .question {
@@ -70,6 +74,7 @@ html_template = """
       border-radius: 8px;
       cursor: pointer;
       margin: 20px 10px 0 10px;
+      transition: background-color 0.2s ease-in-out;
     }
     button:hover {
       background-color: #FFF2AF;
