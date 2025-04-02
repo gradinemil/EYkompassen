@@ -420,21 +420,18 @@ def index():
                     scores[key] += int(val)
 
         total = sum(scores.values())
-        percentages = {k: round((v / total) * 100) for k, v in scores.items()}
-        sorted_matches = sorted(percentages.items(), key=lambda x: x[1], reverse=True)
+        if total > 0:
+            percentages = {k: round(v / total * 100) for k, v in scores.items()}
+            sorted_matches = sorted(percentages.items(), key=lambda x: x[1], reverse=True)
+            result = " ".join([f"{k}:{v}" for k, v in sorted_matches])
+            chart_data = json.dumps(percentages)
+            top_match = (
+        'Strategy & Transactions' if sorted_matches[0][0] == 'strategy' else
+        'Tax & Law' if sorted_matches[0][0] == 'tax' else
+        sorted_matches[0][0].capitalize()
+    )
 
-        full_names = {
-            "strategy": "Strategy & Transactions",
-            "consulting": "Consulting",
-            "assurance": "Assurance",
-            "tax": "Tax & Law"
-        }
-
-        result = ", ".join([f"{full_names[k]}: {v}%" for k, v in sorted_matches])
-        chart_data = json.dumps({full_names[k]: v for k, v in percentages.items()})
-        top_match = full_names[sorted_matches[0][0]]
-
-    return render_template_string(html_template, result=result, questions=questions, chart_data=chart_data, top_match=top_match, full_names=full_names)
+    return render_template_string(html_template, result=result, questions=questions, chart_data=chart_data, top_match=top_match)
 
 if __name__ == "__main__":
     sock = socket.socket()
