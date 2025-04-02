@@ -158,7 +158,7 @@ html_template = """
       <br>
   <p style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
       <br>
-  <p style='font-size: 0.7em; margin-bottom: 10px;'>EY kompassen är ett verktyg för att du ska få en inblick i vad vi arbetar med samt för ta reda på egenskaper du besitter som passar in i våra affärsområden. Ditt resultat ska endast ses som en indikation på vart du möjligen hade passat in hos oss.</p>
+  <p style='font-size: 0.85em; margin-bottom: 10px;'>EY kompassen är ett verktyg för att du ska få en inblick i vad vi arbetar med samt för ta reda på egenskaper du besitter som passar in i våra affärsområden. Ditt resultat ska endast ses som en indikation på vart du möjligen hade passat in hos oss.</p>
       <br>
       <button onclick='startQuiz()'>Starta testet</button>
     </div>
