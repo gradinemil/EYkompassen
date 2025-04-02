@@ -63,7 +63,7 @@ html_template = """
     }
     button {
       background-color: #FFE600;
-      color: white;
+      color: black;
       padding: 12px 20px;
       font-size: 1em;
       border: none;
@@ -72,7 +72,7 @@ html_template = """
       margin: 20px 10px 0 10px;
     }
     button:hover {
-      background-color: #004d40;
+      background-color: #FFE600;
     }
     .result {
       margin-top: 40px;
@@ -95,9 +95,6 @@ html_template = """
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .assurance-color {
-      background-color: #2DB757 !important;
     }
     #intro {
       display: block;
@@ -148,10 +145,10 @@ html_template = """
       <p style='font-size: 1.1em; margin-bottom: 10px;'>Hos oss kan du jobba i någon av dessa affärsområden:</p>
       <br>
        <ul style='list-style: none; padding: 0; font-size: 1em; text-align: left; max-width: 600px; margin: 0 auto;'>
-        <br><li><strong>Assurance:</strong> Säkerställer att företag rapporterar rättvisande och transparent information till omvärlden. Det handlar om revision, hållbarhetsgranskning och rådgivning som skapar förtroende på marknaden.</li><br>
-        <br><li><strong>Consulting:</strong> Arbetar med att hjälpa företag utvecklas genom innovation, transformation och digitalisering. Här kombinerar du teknik, strategi och mänskliga perspektiv för att förbättra kunders verksamhet i grunden.</li><br>
-        <br><li><strong>Strategy & Transactions:</strong> Fokuserar på att skapa långsiktigt värde genom företagsstrategi, transaktioner, värderingar och investeringar. Du stödjer företag i att fatta rätt beslut vid tillväxt, omstrukturering eller köp/försäljning av bolag.</li><br>
-        <br><li><strong>Tax & Law:</strong> Ger företag kvalificerad rådgivning inom skatt, moms, juridik och regelefterlevnad. Du hjälper klienter att förstå och hantera komplexa regelverk globalt och strategiskt.</li>
+        <br><li><strong>Assurance:</strong> Säkerställer att företag rapporterar rättvisande och transparent information till omvärlden. Det handlar om revision, hållbarhetsgranskning och rådgivning som skapar förtroende på marknaden. Här kan man jobba med redovisning, revision eller som lönekonsult.</li><br>
+        <br><li><strong>Consulting:</strong> Arbetar med att hjälpa företag utvecklas genom innovation, transformation och digitalisering. Här kombinerar du teknik, strategi och mänskliga perspektiv för att förbättra kunders verksamhet i grunden. Här kan man jobba som konsult inom business, tech eller cyber security.</li><br>
+        <br><li><strong>Strategy & Transactions:</strong> Fokuserar på att skapa långsiktigt värde genom företagsstrategi, transaktioner, värderingar och investeringar. Du stödjer företag i att fatta rätt beslut vid tillväxt, omstrukturering eller köp/försäljning av bolag. Här kan man jobba som analyst eller konsult.</li><br>
+        <br><li><strong>Tax & Law:</strong> Ger företag kvalificerad rådgivning inom skatt, moms, juridik och regelefterlevnad. Du hjälper klienter att förstå och hantera komplexa regelverk globalt och strategiskt. Här kan man jobba som skattekonsult eller affärsjurist.</li>
       </ul>
       <br>
   <p style='font-size: 1.1em; margin-bottom: 10px;'>EY kompassen är ett verktyg för att du ska få en inblick i vad vi arbetar med samt för ta reda på egenskaper du besitter som passar in i våra affärsområden. Ditt resultat ska endast ses som en indikation på vart du möjligen hade passat in hos oss.</p>
