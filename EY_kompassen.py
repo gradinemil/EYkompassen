@@ -19,21 +19,22 @@ html_template = """
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #2E2E38;
+      color: white;
       margin: 0;
       padding: 0;
     }
     .container {
       max-width: 800px;
       margin: 20px auto;
-      background-color: #2E2E38;
+      background: #2E2E38;
+      color: white;
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       text-align: center;
     }
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
+    h1, h2, h3, p, li, label, select, option, span {
+      color: white;
     }
     .question {
       margin-bottom: 30px;
