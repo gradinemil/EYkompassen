@@ -197,8 +197,8 @@ html_template = """
             {% set label, value = item.split(':') %}
             <span style="padding: 6px 10px; border-radius: 8px; color: white; background-color:
               {% if label.lower() == 'strategy' %}rgb(45, 183, 87)
-              {% elif label.lower() == 'Consulting' %}rgb(24, 140, 229)
-              {% elif label.lower() == 'Assurance' %}rgb(117, 14, 92)
+              {% elif label.lower() == 'consulting' %}rgb(24, 140, 229)
+              {% elif label.lower() == 'assurance' %}rgb(117, 14, 92)
               {% elif label.lower() == 'tax' %}rgb(114, 75, 195)
               {% else %}gray{% endif %};">
               {% if label == 'strategy' %}Strategy & Transactions{% elif label == 'tax' %}Tax & Law{% else %}{{ label }}{% endif %}: {{ value }}%
