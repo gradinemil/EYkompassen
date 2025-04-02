@@ -158,6 +158,8 @@ html_template = """
       <br>
   <p style='font-size: 1.1em; margin-bottom: 10px;'>EY kompassen är ett verktyg för att du ska få en inblick i vad vi arbetar med samt för ta reda på egenskaper du besitter som passar in i våra affärsområden. Ditt resultat ska endast ses som en indikation på vart du möjligen hade passat in hos oss.</p>
       <br>
+  <p style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
+      <br>
       <button onclick='startQuiz()'>Starta testet</button>
     </div>
     {% endif %}
@@ -217,10 +219,10 @@ html_template = """
       <canvas id='resultChart' width='160' height='160' style='display:block; margin: 20px auto;'></canvas>
       <div style='margin-top: 30px; text-align: left;'>
   {% set descriptions = {
-    'strategy': "<strong>Strategy & Transactions:</strong> Du är analytisk, målinriktad och gillar att tänka långsiktigt. Strategy inom EY fokuserar på att hjälpa företag fatta viktiga affärsbeslut och utforma framtidsstrategier. Du kan komma att arbeta med företagsförvärv, affärsmodeller, marknadsanalyser eller transformationsprojekt på hög nivå.",
-    'consulting': "<strong>Consulting:</strong> Du är kommunikativ, kreativ och gillar variation. Consulting innebär att hjälpa organisationer förbättra sin verksamhet, ofta genom digitalisering, förändringsledning eller processoptimering. Du samarbetar nära kunder och driver förändring inom områden som teknik, HR, ekonomi eller hållbarhet.",
-    'assurance': "<strong>Assurance:</strong> Du är noggrann, strukturerad och gillar att saker blir rätt. Inom Assurance arbetar du ofta med revision och kvalitetssäkring av finansiell information. Du hjälper företag skapa förtroende genom att granska årsredovisningar, interna kontroller och säkerställa att allt följer lagar och regler.",
-    'tax': "<strong>Tax & Law:</strong> Du är detaljfokuserad, systematisk och gillar att förstå regler och lagar. Tax innebär att hjälpa företag och privatpersoner navigera i skattesystemet. Du kan arbeta med nationell och internationell beskattning, moms, transaktioner eller hållbar skattekonsultation i en ständigt föränderlig omvärld."
+    'strategy': "<strong>Strategy & Transactions:</strong> Du är analytisk, målinriktad och gillar att tänka långsiktigt. Strategy inom EY fokuserar på att hjälpa företag fatta viktiga affärsbeslut och utforma framtidsstrategier. Du kan komma att arbeta med företagsförvärv, affärsmodeller, marknadsanalyser eller transformationsprojekt på hög nivå. Här kan man jobba som analyst eller konsult.",
+    'consulting': "<strong>Consulting:</strong> Du är kommunikativ, kreativ och gillar variation. Consulting innebär att hjälpa organisationer förbättra sin verksamhet, ofta genom digitalisering, förändringsledning eller processoptimering. Du samarbetar nära kunder och driver förändring inom områden som teknik, HR, ekonomi eller hållbarhet. Här kan man jobba som konsult inom business, tech eller cyber security.",
+    'assurance': "<strong>Assurance:</strong> Du är noggrann, strukturerad och gillar att saker blir rätt. Inom Assurance arbetar du ofta med revision och kvalitetssäkring av finansiell information. Du hjälper företag skapa förtroende genom att granska årsredovisningar, interna kontroller och säkerställa att allt följer lagar och regler. Här kan man jobba med redovisning, revision eller som lönekonsult.",
+    'tax': "<strong>Tax & Law:</strong> Du är detaljfokuserad, systematisk och gillar att förstå regler och lagar. Tax innebär att hjälpa företag och privatpersoner navigera i skattesystemet. Du kan arbeta med nationell och internationell beskattning, moms, transaktioner eller hållbar skattekonsultation i en ständigt föränderlig omvärld. Här kan man jobba som skattekonsult eller affärsjurist."
   } %}
   {% for item in result.split() %}
     {% set label = item.split(':')[0].lower() %}
