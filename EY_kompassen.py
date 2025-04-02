@@ -82,7 +82,7 @@ html_template = """
     #progressBarFill {
       height: 100%;
       width: 0;
-      background-color: #00796b;
+      background-color: #FFE600;
       transition: width 0.3s ease;
       color: white;
       font-weight: bold;
