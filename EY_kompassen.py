@@ -234,6 +234,7 @@ html_template = """
         {% elif label == 'tax' %}rgb(114, 75, 195)
         {% else %}gray{% endif %};">
   {{ descriptions[label]|safe }}
+  <p style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
 </div>
     {% endif %}
   {% endfor %}
