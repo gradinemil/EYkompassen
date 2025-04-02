@@ -385,7 +385,7 @@ questions = {
         {"label": "Jag söker gärna stöd hos andra och följer riktlinjer", "value": "tax:2,assurance:1"},
     ]},
     7: {"text": "Vad tycker du är roligast att arbeta med?", "options": [
-        {"label": "Att analysera och försöka kluriga problem", "value": "strategy:3"},
+        {"label": "Att analysera och försöka lösa kluriga problem", "value": "strategy:3"},
         {"label": "Att utveckla digitala eller tekniska lösningar", "value": "consulting:2,strategy:1"},
         {"label": "Att analysera data för att säkerställa korrekthet", "value": "assurance:3"},
         {"label": "Att gå på djupet och förstå viktiga dokument eller avtal", "value": "tax:3"},
