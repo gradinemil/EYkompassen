@@ -18,7 +18,7 @@ html_template = """
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #2E2E38;
+      background-color: #000000;
       color: white;
       margin: 0;
       padding: 0;
