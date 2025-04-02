@@ -59,7 +59,7 @@ html_template = """
       font-size: 1em;
     }
     button {
-      background-color: #00796b;
+      background-color: #FFE600;
       color: white;
       padding: 12px 20px;
       font-size: 1em;
@@ -69,7 +69,7 @@ html_template = """
       margin: 20px 10px 0 10px;
     }
     button:hover {
-      background-color: #004d40;
+      background-color: #FFE600;
     }
     .result {
       margin-top: 40px;
