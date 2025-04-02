@@ -33,7 +33,10 @@ html_template = """
       box-shadow: 0 10px 20px rgba(0,0,0,0.1);
       text-align: center;
     }
-    h1, h2, h3, p, li, label, select, option, span {
+    h1 {
+      color: #FFE600;
+    }
+    h2, h3, p, li, label, select, option, span {
       color: white;
     }
     .question {
