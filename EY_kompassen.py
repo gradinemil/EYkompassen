@@ -190,6 +190,7 @@ html_template = """
     </div>
     {% if result %}
     <div class='result'>
+      <span style='font-size: 4rem; color: black;'>🧭</span>
       <h1>EY Kompassen</h1>
       <p>Shape your future with confidence!</p>
       <h2>Du matchar mest med: {{ top_match }}</h2>
