@@ -40,10 +40,7 @@ html_template = """
       color: white;
       margin-bottom: 6px;
     }
-    p {
-      color: #FFE600;
-    }
-    h3, h4, li, label, select, option, span {
+    h3, p, li, label, select, option, span {
       color: white;
     }
     .question {
@@ -147,21 +144,19 @@ html_template = """
     {% if not result %}
     <div id='intro'>
   <span style='font-size: 4rem; color: black;'>🧭</span>
-  <h1>EY Kompassen</h1>
+  <h1>The EY compass</h1>
   <p>Shape your future with confidence!</p>
-  <h4 style='font-size: 1.1em; margin-bottom: 10px;'>EY (Ernst & Young) är ett av världens största revisions- och rådgivningsföretag med verksamhet i över 150 länder. Vi hjälper företag, organisationer och offentlig sektor att växa, effektivisera och hantera förändringar på ett hållbart och ansvarsfullt sätt. EY:s syfte är att "bygga en bättre arbetsvärld" genom att skapa långsiktigt värde för kunder, medarbetare och samhället.</p>
-      <h4 style='font-size: 1.1em; margin-bottom: 10px;'>Hos oss kan du jobba i någon av dessa affärsområden:</p>
+  <p style='font-size: 1.1em; margin-bottom: 10px;'>EY (Ernst & Young) is one of the worlds biggest auditing and consulting firms with services in over 150 countries. Here at EY we help companies, organizations and the public sector to grow, streamline and manage change in a responsible and sustainable way. EY:s purpoose is "building a better working world" by creating long-term value for customers, employees and society.</p>
+      <p style='font-size: 1.1em; margin-bottom: 10px;'>With us you can work in one of these business areas:</p>
       <br>
        <ul style='list-style: none; padding: 0; font-size: 1em; text-align: left; max-width: 600px; margin: 0 auto;'>
-        <br><li><strong>Assurance:</strong> Säkerställer att företag rapporterar rättvisande och transparent information till omvärlden. Det handlar om revision, hållbarhetsgranskning och rådgivning som skapar förtroende på marknaden. Här kan man jobba med redovisning, revision eller som lönekonsult.</li><br>
-        <br><li><strong>Consulting:</strong> Arbetar med att hjälpa företag utvecklas genom innovation, transformation och digitalisering. Här kombinerar du teknik, strategi och mänskliga perspektiv för att förbättra kunders verksamhet i grunden. Här kan man jobba som konsult inom business, tech eller cyber security.</li><br>
-        <br><li><strong>Strategy & Transactions:</strong> Fokuserar på att skapa långsiktigt värde genom företagsstrategi, transaktioner, värderingar och investeringar. Du stödjer företag i att fatta rätt beslut vid tillväxt, omstrukturering eller köp/försäljning av bolag. Här kan man jobba som analyst eller konsult.</li><br>
-        <br><li><strong>Tax & Law:</strong> Ger företag kvalificerad rådgivning inom skatt, moms, juridik och regelefterlevnad. Du hjälper klienter att förstå och hantera komplexa regelverk globalt och strategiskt. Här kan man jobba som skattekonsult eller affärsjurist.</li>
+        <br><li><strong>Assurance:</strong> Ensures that companies report accurate and transparent information to the outside world. It involves auditing, sustainability reviews and providing advice that builds trust in the market. You can work in accounting, auditing or as a payroll consultant.</li><br>
+        <br><li><strong>Consulting:</strong> Working to help businesses evolve through innovation, transformation and digitalization. You'll combine technology, strategy and human perspectives to fundamentally improve clients' businesses. You can work as a consultant in business, tech or cyber security.</li><br>
+        <br><li><strong>EY-Parthenon:</strong> Focus on creating long-term value through corporate strategy, transactions, valuations and investments. You support companies in making the right decisions when growing, restructuring or buying/selling companies. You can work as an analyst or consultant.</li><br>
+        <br><li><strong>Tax & Law:</strong> Provides businesses with expert tax, VAT, legal and compliance advice. You will help clients understand and manage complex regulations globally and strategically. You can work as a tax consultant or business lawyer.</li>
       </ul>
       <br>
-  <h4 style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
-      <br>
-  <h4 style='font-size: 0.85em; margin-bottom: 10px;'>EY kompassen är ett verktyg för att du ska få en inblick i vad vi arbetar med samt för ta reda på egenskaper du besitter som passar in i våra affärsområden. Ditt resultat ska endast ses som en indikation på vart du möjligen hade passat in hos oss.</p>
+  <p style='font-size: 1.1em; margin-bottom: 10px;'>The EY compass is a tool to help you get an insight into what we work with and to find out what business area your characteristics would be a great fit for. Your result schould only be seen as an indication where you could be the best fit, its not foolproof.</p>
       <br>
       <button onclick='startQuiz()'>Starta testet</button>
     </div>
@@ -169,7 +164,7 @@ html_template = """
 
     <div id='quizSection' style='display:none;'>
       <span style='font-size: 4rem; color: black;'>🧭</span>
-      <h1>EY Kompassen</h1>
+      <h1>The EY compass</h1>
       <p>Shape your future with confidence!</p>
       <div style='text-align:left;margin-bottom:5px;font-weight:bold;' id='questionCounter'></div>
       <div id='progressBar'><div id='progressBarFill'></div></div>
@@ -179,7 +174,7 @@ html_template = """
           <div class='question' data-question-id='{{ i }}'>
             <h2>{{ question['text'] }}</h2>
             <select name='q{{ i }}'>
-              <option value='' disabled selected hidden>Välj ditt svar</option>
+              <option value='' disabled selected hidden>Choose your answer</option>
               {% for option in question['options'] %}
               <option value='{{ option['value'] }}'>{{ option['label'] }}</option>
               {% endfor %}
@@ -187,23 +182,23 @@ html_template = """
           </div>
           {% endfor %}
         </div>
-        <div id="warningMessage">Välj ett svarsalternativ innan du kan gå vidare till nästa</div>
+        <div id="warningMessage">Choose an answer option before you can proceed</div>
         <div>
-          <button type='button' onclick='prevQuestion()' id='prevBtn' style='display:none;'>Föregående</button>
-          <button type='button' onclick='nextQuestion()' id='nextBtn'>Nästa</button>
-          <button type='button' onclick='submitQuiz()' id='submitBtn' style='display:none;'>Se resultat</button>
+          <button type='button' onclick='prevQuestion()' id='prevBtn' style='display:none;'>Previous</button>
+          <button type='button' onclick='nextQuestion()' id='nextBtn'>Next</button>
+          <button type='button' onclick='submitQuiz()' id='submitBtn' style='display:none;'>See result</button>
         </div>
         <div style='text-align:center;'>
-          <button onclick='window.location.href="/"'>Gör testet igen</button>
+          <button onclick='window.location.href="/"'>Re-do the test</button>
         </div>
       </form>
     </div>
     {% if result %}
     <div class='result'>
       <span style='font-size: 4rem; color: black;'>🧭</span>
-      <h1>EY Kompassen</h1>
+      <h1>The EY compass</h1>
       <p>Shape your future with confidence!</p>
-      <h2>Du matchar mest med: {{ top_match }}</h2>
+      <h2>Your best match is: {{ top_match }}</h2>
       <div style='display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;'>
         {% for item in result.split() %}
           {% if ':' in item %}
@@ -214,7 +209,7 @@ html_template = """
               {% elif label.lower() == 'assurance' %}rgb(117, 14, 92)
               {% elif label.lower() == 'tax' %}rgb(114, 75, 195)
               {% else %}gray{% endif %};">
-              {% if label == 'strategy' %}Strategy & Transactions{% elif label == 'tax' %}Tax & Law{% else %}{{ label }}{% endif %}: {{ value }}%
+              {% if label == 'strategy' %}EY-Parthenon{% elif label == 'tax' %}Tax & Law{% else %}{{ label }}{% endif %}: {{ value }}%
             </span>
           {% endif %}
         {% endfor %}
@@ -222,10 +217,10 @@ html_template = """
       <canvas id='resultChart' width='160' height='160' style='display:block; margin: 20px auto;'></canvas>
       <div style='margin-top: 30px; text-align: left;'>
   {% set descriptions = {
-    'strategy': "<strong>Strategy & Transactions:</strong> Du är analytisk, målinriktad och gillar att tänka långsiktigt. Strategy inom EY fokuserar på att hjälpa företag fatta viktiga affärsbeslut och utforma framtidsstrategier. Du kan komma att arbeta med företagsförvärv, affärsmodeller, marknadsanalyser eller transformationsprojekt på hög nivå. Här kan man jobba som analyst eller konsult.",
-    'consulting': "<strong>Consulting:</strong> Du är kommunikativ, kreativ och gillar variation. Consulting innebär att hjälpa organisationer förbättra sin verksamhet, ofta genom digitalisering, förändringsledning eller processoptimering. Du samarbetar nära kunder och driver förändring inom områden som teknik, HR, ekonomi eller hållbarhet. Här kan man jobba som konsult inom business, tech eller cyber security.",
-    'assurance': "<strong>Assurance:</strong> Du är noggrann, strukturerad och gillar att saker blir rätt. Inom Assurance arbetar du ofta med revision och kvalitetssäkring av finansiell information. Du hjälper företag skapa förtroende genom att granska årsredovisningar, interna kontroller och säkerställa att allt följer lagar och regler. Här kan man jobba med redovisning, revision eller som lönekonsult.",
-    'tax': "<strong>Tax & Law:</strong> Du är detaljfokuserad, systematisk och gillar att förstå regler och lagar. Tax innebär att hjälpa företag och privatpersoner navigera i skattesystemet. Du kan arbeta med nationell och internationell beskattning, moms, transaktioner eller hållbar skattekonsultation i en ständigt föränderlig omvärld. Här kan man jobba som skattekonsult eller affärsjurist."
+    'strategy': "<strong>EY-Parthenon:</strong> You are analytical, goal-orientated and like to think long-term. Strategy at EY focuses on helping companies make key business decisions and shape future strategies. You may work on acquisitions, business models, market analyses or high-level transformation projects.",
+    'consulting': "<strong>Consulting:</strong> You are communicative, creative and like variety. Consulting means helping organisations improve their business, often through digitalisation, change management or process optimisation. You work closely with clients and drive change in areas such as technology, HR, finance or sustainability.",
+    'assurance': "<strong>Assurance:</strong> You are accurate, structured and like to get things right. In Assurance, you often work on auditing and quality assurance of financial information. You help companies build trust by reviewing annual reports, internal controls and ensuring compliance with laws and regulations.",
+    'tax': "<strong>Tax & Law:</strong> You are detail-orientated, systematic and like to understand rules and laws. Tax involves helping businesses and individuals navigate the tax system. You may work on national and international taxation, VAT, transactions or sustainable tax consulting in an ever-changing world."
   } %}
   {% for item in result.split() %}
     {% set label = item.split(':')[0].lower() %}
@@ -241,9 +236,8 @@ html_template = """
     {% endif %}
   {% endfor %}
 </div>
-  <h4 style='font-size: 1.1em; margin-bottom: 10px;'>Vill du läsa mer om EY och/eller våra affärsområden besök vår kärriärsida här: https://www.ey.com/sv_se/careers/karriarmojligheter-for-nyutexaminerade</p>
       <br>
-      <button onclick='window.location.href="/"'>Gör testet igen</button>
+      <button onclick='window.location.href="/"'>Re-do the test</button>
     </div>
     <script>
       const data = {{ chart_data | safe }};
@@ -310,7 +304,7 @@ html_template = """
       nextButton.style.display = currentQuestion < questions.length - 1 ? 'inline-block' : 'none';
       submitButton.style.display = currentQuestion === questions.length - 1 ? 'inline-block' : 'none';
       progressFill.style.width = ((currentQuestion + 1) / questions.length * 100) + '%';
-      document.getElementById('questionCounter').innerText = `Fråga ${currentQuestion + 1} av ${questions.length}`;
+      document.getElementById('questionCounter').innerText = `Question ${currentQuestion + 1} av ${questions.length}`;
     }
     function nextQuestion() {
       const currentSelect = questions[currentQuestion].querySelector('select');
@@ -347,29 +341,29 @@ html_template = """
 """
 
 questions = {
-    9: {"text": "I vilken typ av arbetsmiljö trivs du bäst?", "options": [
-        {"label": "Ett ordnat och förutsägbart arbetsklimat", "value": "assurance:2,tax:2"},
-        {"label": "En fartfylld miljö med nya idéer och variation", "value": "consulting:2,strategy:1"},
-        {"label": "En tänkande miljö där långsiktighet och logik är viktigt", "value": "strategy:2,consulting:1"},
-        {"label": "En miljö där det är viktigt att allt blir rätt", "value": "assurance:3"},
+    9: {"text": "What work enviroment do you enjoy the most?", "options": [
+        {"label": "An organised and predictable working enviroment", "value": "assurance:2,tax:2"},
+        {"label": "A fast paced enviroment with new ideas and variation", "value": "consulting:2,strategy:1"},
+        {"label": "An enviroment where long-term thinking and logic is important", "value": "strategy:2,consulting:1"},
+        {"label": "An enviroment where precision and corectness is in focus", "value": "assurance:3"},
     ]},
-    10: {"text": "Vilken typ av samarbete föredrar du?", "options": [
-        {"label": "Jag trivs bäst i små team med tydliga roller", "value": "tax:2,assurance:1"},
-        {"label": "Jag gillar att jobba med olika människor och tänka tillsammans", "value": "consulting:2,strategy:1"},
-        {"label": "Jag föredrar att arbeta självständigt och ta ansvar för mina delar", "value": "assurance:2"},
-        {"label": "Jag tycker om att ha inflytande och vara med i beslutsfattning", "value": "strategy:3"},
+    10: {"text": "What type of cooperation do you prefer?", "options": [
+        {"label": "I prefer to work in small teams with clear roles", "value": "tax:2,assurance:1"},
+        {"label": "I like to work with different people and together figure out solutions", "value": "consulting:2,strategy:1"},
+        {"label": "I prefer to work independently and take responsibility for my parts", "value": "assurance:2"},
+        {"label": "I like to make an impact and be part of making decisions", "value": "strategy:3"},
     ]},
-    1: {"text": "Hur hanterar du helst nya situationer?", "options": [
-        {"label": "Jag gillar att ta ett steg tillbaka och få överblick först", "value": "strategy:2,consulting:1"},
-        {"label": "Jag tar itu med detaljerna först", "value": "assurance:2,tax:1"},
-        {"label": "Jag brainstormar med andra och söker kreativa lösningar", "value": "consulting:2,strategy:1"},
-        {"label": "Jag gillar när det finns tydliga instruktioner och ramar att följa", "value": "tax:2,assurance:1"},
+    1: {"text": "How do you prefer to handle new situations?", "options": [
+        {"label": "I like to take a step back and firstly look at the bigger picture", "value": "strategy:2,consulting:1"},
+        {"label": "I'll deal with the details first", "value": "assurance:2,tax:1"},
+        {"label": "I brainstorm with others and to seek creative solutions", "value": "consulting:2,strategy:1"},
+        {"label": "I like when there are clear instructions and frameworks to follow", "value": "tax:2,assurance:1"},
     ]},
-    2: {"text": "Vilken typ av projekt låter mest intressant?", "options": [
-        {"label": "Förbättra och utveckla befintliga processer och system", "value": "consulting:2,assurance:1"},
-        {"label": "Bidra till beslut som formar framtiden", "value": "strategy:3"},
-        {"label": "Projekt där man får tolka information noggrant", "value": "tax:2,assurance:1"},
-        {"label": "Granska och säkra information", "value": "assurance:3"},
+    2: {"text": "Which of these projects intrests you the most?", "options": [
+        {"label": "lägg till projekt CONSULTING", "value": "consulting:2,assurance:1"},
+        {"label": "lägg till projekt SAT", "value": "strategy:3"},
+        {"label": "lägg till projekt TAX", "value": "tax:2,assurance:1"},
+        {"label": "lägg till projekt ASSURANCE", "value": "assurance:3"},
     ]},
     3: {"text": "Vad motiverar dig mest?", "options": [
         {"label": "Att tänka kreativt och hitta nya vägar framåt", "value": "strategy:2,consulting:1"},
