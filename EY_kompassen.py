@@ -158,7 +158,7 @@ html_template = """
       <br>
   <p style='font-size: 1.1em; margin-bottom: 10px;'>The EY compass is a tool to help you get an insight into what we work with and to find out what business area your characteristics would be a great fit for. Your result schould only be seen as an indication where you could be the best fit, its not foolproof.</p>
       <br>
-      <button onclick='startQuiz()'>Starta testet</button>
+      <button onclick='startQuiz()'>Start test</button>
     </div>
     {% endif %}
 
@@ -189,7 +189,7 @@ html_template = """
           <button type='button' onclick='submitQuiz()' id='submitBtn' style='display:none;'>See result</button>
         </div>
         <div style='text-align:center;'>
-          <button onclick='window.location.href="/"'>Re-do the test</button>
+          <button onclick='window.location.href="/"'>Redo the test</button>
         </div>
       </form>
     </div>
@@ -209,7 +209,7 @@ html_template = """
               {% elif label.lower() == 'assurance' %}rgb(117, 14, 92)
               {% elif label.lower() == 'tax' %}rgb(114, 75, 195)
               {% else %}gray{% endif %};">
-              {% if label == 'strategy' %}EY-Parthenon{% elif label == 'tax' %}Tax & Law{% else %}{{ label }}{% endif %}: {{ value }}%
+              {% if label == 'strategy' %}EY-Parthenon{% elif label == 'tax' %}Tax & Law{% elif label == 'assurance' %}Assurance{% elif label == 'consulting' %}Consulting{% else %}{{ label }}{% endif %}: {{ value }}%
             </span>
           {% endif %}
         {% endfor %}
