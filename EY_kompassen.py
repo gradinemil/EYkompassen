@@ -341,65 +341,59 @@ html_template = """
 """
 
 questions = {
-    9: {"text": "What work enviroment do you enjoy the most?", "options": [
+    6: {"text": "What work enviroment do you enjoy the most?", "options": [
         {"label": "An organised and predictable working enviroment", "value": "assurance:2,tax:2"},
         {"label": "A fast paced enviroment with new ideas and variation", "value": "consulting:2,strategy:1"},
         {"label": "An enviroment where long-term thinking and logic is important", "value": "strategy:2,consulting:1"},
         {"label": "An enviroment where precision and corectness is in focus", "value": "assurance:3"},
     ]},
-    10: {"text": "What type of cooperation do you prefer?", "options": [
+    5: {"text": "What type of cooperation do you prefer?", "options": [
         {"label": "I prefer to work in small teams with clear roles", "value": "tax:2,assurance:1"},
         {"label": "I like to work with different people and together figure out solutions", "value": "consulting:2,strategy:1"},
         {"label": "I prefer to work independently and take responsibility for my parts", "value": "assurance:2"},
         {"label": "I like to make an impact and be part of making decisions", "value": "strategy:3"},
     ]},
-    1: {"text": "How do you prefer to handle new situations?", "options": [
+    2: {"text": "How do you prefer to handle new situations?", "options": [
         {"label": "I like to take a step back and firstly look at the bigger picture", "value": "strategy:2,consulting:1"},
         {"label": "I'll deal with the details first", "value": "assurance:2,tax:1"},
         {"label": "I brainstorm with others and to seek creative solutions", "value": "consulting:2,strategy:1"},
         {"label": "I like when there are clear instructions and frameworks to follow", "value": "tax:2,assurance:1"},
     ]},
-    2: {"text": "Which of these projects intrests you the most?", "options": [
+    7: {"text": "Which of these projects intrests you the most?", "options": [
         {"label": "lägg till projekt CONSULTING", "value": "consulting:2,assurance:1"},
-        {"label": "lägg till projekt SAT", "value": "strategy:3"},
+        {"label": "lägg till projekt EY-P", "value": "strategy:3"},
         {"label": "lägg till projekt TAX", "value": "tax:2,assurance:1"},
         {"label": "lägg till projekt ASSURANCE", "value": "assurance:3"},
     ]},
-    3: {"text": "Vad motiverar dig mest?", "options": [
-        {"label": "Att tänka kreativt och hitta nya vägar framåt", "value": "strategy:2,consulting:1"},
-        {"label": "Att ha tydliga riktlinjer och säkra att allt stämmer", "value": "assurance:2,tax:1"},
-        {"label": "Att lösa problem i samarbete med andra", "value": "consulting:2,strategy:1"},
-        {"label": "Att fördjupa mig i detaljer och påverka med kunskap", "value": "tax:3"},
+    4: {"text": "How do you best decribe your workstyle?", "options": [
+        {"label": "Logical, structured and responsible", "value": "assurance:2,tax:1"},
+        {"label": "Creative, communicative and open to change", "value": "consulting:2,strategy:1"},
+        {"label": "Target-oriented, analytical och holistic", "value": "strategy:2,consulting:1"},
+        {"label": "Precise, systematical and detaljrerad", "value": "tax:2,assurance:1"},
     ]},
-    4: {"text": "Hur beskriver du din arbetsstil bäst?", "options": [
-        {"label": "Logisk, strukturerad och ansvarsfull", "value": "assurance:2,tax:1"},
-        {"label": "Kreativ, kommunikativ och öppen för förändring", "value": "consulting:2,strategy:1"},
-        {"label": "Målinriktad, analytisk och helhetsorienterad", "value": "strategy:2,consulting:1"},
-        {"label": "Noggrann, systematisk och gillar tydliga riktlinjer", "value": "tax:2,assurance:1"},
+    1: {"text": "What do/did you study at university?", "options": [
+        {"label": "Data or IT", "value": "consulting:1,strategy:1,assurance:1,tax:1"},
+        {"label": "Economics, Business and/or Management", "value": "consulting:1,strategy:1,assurance:1,tax:1"},
+        {"label": "Engineering or Tech", "value": "consulting:1,strategy:1,assurance:1,tax:1"},
+        {"label": "Other", "value": "consulting:1,strategy:1,assurance:1,tax:1"},
     ]},
-    5: {"text": "Vilket påstående stämmer bäst in på dig?", "options": [
-        {"label": "Jag gillar att förbättra saker och optimera lösningar", "value": "consulting:2,strategy:1"},
-        {"label": "Jag är nyfiken på samband och vill förstå helheten", "value": "strategy:2,assurance:1"},
-        {"label": "Jag vill skapa trygghet och se till att allt stämmer", "value": "assurance:2,tax:1"},
-        {"label": "Jag drivs av att förstå komplexa lagar och regler", "value": "tax:3"},
+    3: {"text": "How do you deal with uncertainty?", "options": [
+        {"label": "I like to create structure in complex situations", "value": "assurance:2,tax:1"},
+        {"label": "I like being creative when the situation is unclear", "value": "strategy:2,consulting:1"},
+        {"label": "I try to understand the bigger picture and plan accordingly", "value": "strategy:2"},
+        {"label": "I seek support from others and follow guidelines", "value": "tax:2,assurance:1"},
     ]},
-    6: {"text": "Hur hanterar du osäkerhet?", "options": [
-        {"label": "Jag gillar att skapa struktur i komplexa situationer", "value": "assurance:2,tax:1"},
-        {"label": "Jag tycker om att vara kreativ när läget är otydligt", "value": "strategy:2,consulting:1"},
-        {"label": "Jag försöker förstå helheten och planera därefter", "value": "strategy:2"},
-        {"label": "Jag söker gärna stöd hos andra och följer riktlinjer", "value": "tax:2,assurance:1"},
+    9: {"text": "What do you enjoy working on most?", "options": [
+        {"label": "To analyze and try solving complicated problems", "value": "strategy:3"},
+        {"label": "To develop digital or technical solutions", "value": "consulting:2,strategy:1"},
+        {"label": "Analysing data to ensure accuracy", "value": "assurance:3"},
+        {"label": "To go in depth and understand important documents or agreements", "value": "tax:3"},
     ]},
-    7: {"text": "Vad tycker du är roligast att arbeta med?", "options": [
-        {"label": "Att analysera och försöka lösa kluriga problem", "value": "strategy:3"},
-        {"label": "Att utveckla digitala eller tekniska lösningar", "value": "consulting:2,strategy:1"},
-        {"label": "Att analysera data för att säkerställa korrekthet", "value": "assurance:3"},
-        {"label": "Att gå på djupet och förstå viktiga dokument eller avtal", "value": "tax:3"},
-    ]},
-    8: {"text": "Hur vill du att din roll ska påverka andra?", "options": [
-        {"label": "Skapa tydlighet och pålitlighet i siffror och rapporter", "value": "assurance:2"},
-        {"label": "Göra komplexa beslut lättare att förstå och fatta", "value": "strategy:2,consulting:1"},
-        {"label": "Hjälpa organisationer att utvecklas och växa", "value": "consulting:2,strategy:1"},
-        {"label": "Hjälpa till att allt fungerar som det ska i vardagen", "value": "tax:2,assurance:1"},
+    8: {"text": "How do you want your workrole to impact others?", "options": [
+        {"label": "Bringing clarity and reliability to figures and reports", "value": "assurance:2"},
+        {"label": "Help make complex and hard decisions easier to understand and to make", "value": "strategy:2,consulting:1"},
+        {"label": "Help organisations and companies develop and grow", "value": "consulting:2,strategy:1"},
+        {"label": "Helping to ensure that everything works properly in everyday life", "value": "tax:2,assurance:1"},
     ]},
 }
 
